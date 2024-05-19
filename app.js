@@ -7,22 +7,22 @@ fetch('https://api.fastforex.io/fetch-all?api_key=d0397fe669-3b73bc8f9d-sdfc74',
   .then(data => {
     const rates = data.results;
     exchangeRates = {
-      "EUR_USD": rates.EUR / rates.USD,
-      "USD_EUR": rates.USD / rates.EUR,
-      "EUR_RUB": rates.EUR / rates.RUB,
+      "EUR_USD": rates.USD / rates.EUR,
+      "USD_EUR": rates.EUR / rates.USD,
+      "EUR_RUB": rates.RUB / rates.EUR,
       "RUB_EUR": rates.EUR / rates.RUB,
-      "EUR_GBP": rates.EUR / rates.GBP,
-      "GBP_EUR": rates.GBP / rates.EUR,
+      "EUR_GBP": rates.GBP / rates.EUR,
+      "GBP_EUR": rates.EUR / rates.GBP,
       "USD_RUB": rates.RUB / rates.USD,
       "RUB_USD": rates.USD / rates.RUB,
-      "USD_GBP": rates.USD / rates.GBP,
-      "GBP_USD": rates.GBP / rates.USD,
-      "RUB_GBP": rates.RUB / rates.GBP,
-      "RUB_RUB": rates.RUB / rates.RUB,
+      "USD_GBP": rates.GBP / rates.USD,
+      "GBP_USD": rates.USD / rates.GBP,
+      "RUB_GBP": rates.GBP / rates.RUB,
+      "GBP_RUB": rates.RUB / rates.GBP,
+	    "RUB_RUB": rates.RUB / rates.RUB,
       "USD_USD": rates.USD / rates.USD,
       "EUR_EUR": rates.EUR / rates.EUR,
       "GBP_GBP": rates.GBP / rates.GBP,
-      "GBP_RUB": rates.GBP / rates.RUB
     };
     updateButtonStyles();
     updateSelectedCurrencies();
