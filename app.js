@@ -57,11 +57,11 @@ function updateSelectedCurrencies() {
   let rate1 = exchangeRates[currency1 + "_" + currency2];
   let rate2 = exchangeRates[currency2 + "_" + currency1];
   if (rate1 && rate2) {
-    document.getElementById('selected-currencies').innerText = `1 ${currency1} = ${rate1.toFixed(4)} ${currency2}`;
-    document.getElementById('selected-currencies-duplicate').innerText = `1 ${currency1} = ${rate2.toFixed(4)} ${currency2}`;
+    document.getElementById('selected-currencies-duplicate').innerText = `1 ${currency2} = ${rate1.toFixed(4)} ${currency1}`;
+    document.getElementById('selected-currencies').innerText = `1 ${currency1} = ${rate2.toFixed(4)} ${currency2}`;
   } else {
-    document.getElementById('selected-currencies').innerText = `Курс для ${currency1} и ${currency2} недоступен`;
     document.getElementById('selected-currencies-duplicate').innerText = `Курс для ${currency1} и ${currency2} недоступен`;
+    document.getElementById('selected-currencies').innerText = `Курс для ${currency1} и ${currency2} недоступен`;
   }
 }
 
