@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="./Asset 1@3x 1.png" alt="logo">
+        <ul class="nav">
+            <li class="primary">БАНК</li>
+            <li>БИЗНЕС</li>
+            <li>ИНВЕСТИЦИИ</li>
+            <li>СТРАХОВАНИЕ</li>
+            <li>МОБАЙЛ</li>
+            <li>ПУТЕШЕСТВИЯ</li>
+            <li>РАЗВЛЕЧЕНИЯ</li>
+        </ul>
+        <button class="signin">ВОЙТИ</button>
+    </div>
+    <div class="container">
+        <div class="text">Конвертер валют онлайн</div>
+        <span class="text1">У меня есть </span>
+        <span class="text2">Хочу приобрести</span>
+        <div class="curr">
+            <div id="currency2-buttons">
+                <button class="a" onclick="setCurrency('currency2', 'RUB')">RUB</button>
+                <button class="a" onclick="setCurrency('currency2', 'USD')">USD</button>
+                <button class="a" onclick="setCurrency('currency2', 'EUR')">EUR</button>
+                <button class="a" onclick="setCurrency('currency2', 'GBP')">GBP</button>
+            </div>
+            <input id="amount1" type="number">
+            <div id="currency1-buttons">
+                <button class="b" onclick="setCurrency('currency1', 'RUB')">RUB</button>
+                <button class="b" onclick="setCurrency('currency1', 'USD')">USD</button>
+                <button class="b" onclick="setCurrency('currency1', 'EUR')">EUR</button>
+                <button class="b" onclick="setCurrency('currency1', 'GBP')">GBP</button>
+            </div>
+            <input id="amount2" type="number">
+        </div>
+    </div>
+    <div id="selected-currencies"></div>
+    <div id="selected-currencies-duplicate"></div>
+    <script src="./app.js"></script>
+</body>
+</html>
